@@ -1,17 +1,19 @@
+(function(exports) {
+    function NoteController(NoteList) {
+        this.noteList = NoteList();
+        this.noteList.add("Favourite drink: seltzer")
+        this.noteListView = NoteListView(this.noteList)
+    }
+
+    NoteController.prototype.insertHTMLToApp = function() {
+        document.getElementById("app").innerHTML = this.noteListView.returnNotesHTML();
+    }
+
+    exports.NoteController = NoteController;
+
+})(this);
 
 
-function noteController(noteListViewArg, noteListArg, text = "Favourite drink: seltzer ") {
-    let noteControllerText = text;
-
-    let noteList = new NoteList();
-    noteList.add(noteControllerText);
-
-    let noteListView = new NoteListView(noteList);
-
-
-    document.getElementById("app").innerHTML = noteListView.returnNotesHTML();
-
-}
-console.log("noteController being called");
-
- noteController(NoteListView,NoteList);
+//
+// noteController(NoteListView,NoteList);
+//

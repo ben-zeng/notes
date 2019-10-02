@@ -9,4 +9,3 @@ function testCreateNoteWithText(){
   return "Pass - " + arguments.callee.name;
 };
 
-

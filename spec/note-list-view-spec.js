@@ -16,8 +16,8 @@ function testNoteListViewInstantiation(){
   function testNoteListViewReturnsNotesInHTML() {
     try {
          let noteList = new NoteList();
-         noteList.add("note1")
-         noteList.add("note2")
+         noteList.add("note1");
+         noteList.add("note2");
 
          let noteListView = new NoteListView(noteList);
 
@@ -33,7 +33,7 @@ function testNoteListViewInstantiation(){
 function testNoteListViewHandlesVariousLengths() {
   try {
        let noteList = new NoteList();
-       noteList.add("note1")
+       noteList.add("note1");
 
        let noteListView = new NoteListView(noteList);
 

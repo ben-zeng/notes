@@ -5,20 +5,22 @@
   <meta charset="utf-8">
   <title>Spec Tester v1.0.0</title>
 
+  <!-- include dependencies here... -->
+  <script src="spec/assert.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+
   <!-- include src files here... -->
   <script src="note-model.js"></script>
   <script src="note-list-model.js"></script>
   <script src="note-list-view.js"></script>
-
+  <script src="note-controller.js"></script>
 
   <!-- include spec files here... -->
   <script src="spec/note-model-spec.js"></script>
   <script src="spec/note-list-model-spec.js"></script>
   <script src="spec/note-list-view-spec.js"></script>
+  <script src="spec/note-controller-spec.js"></script>
 
-  <script src="spec/assert.js"></script>
-
-  <script src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 </head>
 
 <script>
@@ -30,6 +32,7 @@
     $("#results").append("<li>" + testNoteListViewReturnsNotesInHTML()+"</li>");
     $("#results").append("<li>" + testNoteListViewHandlesVariousLengths()+"</li>");
     $("#results").append("<li>" + testNoteListViewHandlesZeroLength()+"</li>");
+    $("#results").append("<li>" + testNoteControllerInnerHTML()+"</li>");
 
 
 
