@@ -8,7 +8,7 @@
     let arrayIn = this.listNotes.notes;
     let arrayOut = [];
       if (arrayIn.length === 0)
-        return null
+        return null;
       for (let i = 0; i < arrayIn.length; i++) {
         arrayOut.push(arrayIn[i].getText());
       }
