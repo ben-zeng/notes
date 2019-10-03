@@ -1,17 +1,22 @@
 function testNoteControllerInnerHTML(){
-    let innerHTML = "<ul><li><div>Favourite food: pesto</div></li></ul>";
-    let noteText = "Favourite food: pesto";
+    let innerHTML = "<ul><li><div>Favourite drink: seltzer</div></li></ul>";
 
     try {
-        // let noteList = new NoteList();
-        // noteList.add(noteText);
-        let noteListView = new NoteListView();
-        noteListView.returnNotesHTML = function() {
-            return "<ul><li><div>Favourite food: pesto</div></li></ul>"
-        };
+        let noteList = new NoteList();
+        // // noteList.add(noteText);
+        // let noteListView = new NoteListView(noteList);
+        let noteController = new NoteController(noteList);
+        let body = document.getElementsByTagName("body");
+        let dummyElement = document.createElement("div");
+        dummyElement.id = "app";
+        body.item(0).appendChild(dummyElement);
 
-        assert.isTrue(noteListView.returnNotesHTML() === innerHTML)
+        noteController.insertHTMLToApp();
+       // let check1 = document.getElementById("app").innerHTML;
+       // let check2 = noteController.insertHTMLToApp();
 
+        assert.isTrue(document.getElementById("app").innerHTML === innerHTML)
+        body.item(0).removeChild(dummyElement);
     }
     catch(err) {
         return "Error - " + arguments.callee.name + " : " + err;
