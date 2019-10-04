@@ -12,8 +12,3 @@
     exports.NoteController = NoteController;
 
 })(this);
-
-
-//
-// noteController(NoteListView,NoteList);
-//
