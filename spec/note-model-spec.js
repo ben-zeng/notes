@@ -7,5 +7,5 @@ function testCreateNoteWithText(){
       return "Error - " + arguments.callee.name + " : " + err;
   }
   return "Pass - " + arguments.callee.name;
-};
+}
 

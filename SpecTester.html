@@ -14,12 +14,15 @@
   <script src="src/note-list-model.js"></script>
   <script src="src/note-list-view.js"></script>
   <script src="src/note-controller.js"></script>
+  <script src="src/single-note-view.js"></script>
+
 
   <!-- include spec files here... -->
   <script src="spec/note-model-spec.js"></script>
   <script src="spec/note-list-model-spec.js"></script>
   <script src="spec/note-list-view-spec.js"></script>
   <script src="spec/note-controller-spec.js"></script>
+  <script src="spec/single-note-view-spec.js"></script>
 
 </head>
 
@@ -33,6 +36,7 @@
     $("#results").append("<li>" + testNoteListViewHandlesVariousLengths()+"</li>");
     $("#results").append("<li>" + testNoteListViewHandlesZeroLength()+"</li>");
     $("#results").append("<li>" + testNoteControllerInnerHTML()+"</li>");
+    $("#results").append("<li>" + testSingleNoteViewReturnHTML()+"</li>");
   });
 </script>
 

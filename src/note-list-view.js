@@ -14,7 +14,7 @@
       }
     return `<ul><li><div>${arrayOut.join("</div></li><li><div>")}</div></li></ul>`
 
-  }
+  };
 
   exports.NoteListView = NoteListView;
 
